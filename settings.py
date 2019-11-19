@@ -22,13 +22,7 @@ MANAGERS = ADMINS
 
 DATABASES = local.DATABASES
 
-SITE_PREFIX = local.SITE_PREFIX
-
 PAYPAL_TEST = local.PAYPAL_TEST
-
-LOGIN_URL = SITE_PREFIX + 'user/login/'
-LOGIN_REDIRECT_URL = SITE_PREFIX + 'user/index/'
-LOGOUT_REDIRECT_URL = SITE_PREFIX + 'index/'
 
 # Append slash seems to be the way to go overall
 APPEND_SLASH = True
@@ -167,6 +161,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 AUTH_PROFILE_MODULE = 'tracker.UserProfile'
+
+LOGIN_URL = 'tracker:login'
 
 if local.HAS_EMAIL:
   EMAIL_HOST = local.EMAIL_HOST
