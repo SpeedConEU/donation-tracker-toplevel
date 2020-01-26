@@ -3,5 +3,5 @@ local.py
 .idea
 db/
 .direnv
-logs/
+log/uwsgi.log
 prizes/
