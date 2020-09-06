@@ -5,3 +5,4 @@ db/
 .direnv
 log/uwsgi.log
 prizes/
+.env
